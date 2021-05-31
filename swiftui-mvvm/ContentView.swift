@@ -19,7 +19,11 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(items) {item in
-                    Text(item.name)
+                    NavigationLink(
+                        destination: Text("Destination \(item.name)"),
+                        label: {
+                            Text(item.name)
+                        })
                 }
                 .onDelete(perform: { indexSet in
                     for index in indexSet {
@@ -32,7 +36,14 @@ struct ContentView: View {
             }//:List
             .navigationBarTitle(Text("Todo's"), displayMode: .large)
             .toolbar(content:{
-                EditButton()
+                ToolbarItemGroup(placement:.navigationBarTrailing){
+                    EditButton()
+                    Button(action: {
+                        items.append(Item(id: UUID(), name: "newly added"))
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                }
             })
         }//:NavigationView
     }
