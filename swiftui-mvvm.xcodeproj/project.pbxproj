@@ -13,7 +13,18 @@
 		224FC0152664E38500D1943E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224FC0142664E38500D1943E /* Preview Assets.xcassets */; };
 		224FC0202664F11A00D1943E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FC01F2664F11A00D1943E /* Item.swift */; };
 		224FC0222664F16700D1943E /* TodoListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FC0212664F16700D1943E /* TodoListManager.swift */; };
+		224FC02A2664F8EA00D1943E /* swiftui_mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FC0292664F8EA00D1943E /* swiftui_mvvmTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		224FC02C2664F8EA00D1943E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 224FC0022664E37800D1943E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 224FC0092664E37800D1943E;
+			remoteInfo = "swiftui-mvvm";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		224FC00A2664E37800D1943E /* swiftui-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +35,20 @@
 		224FC0162664E38500D1943E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224FC01F2664F11A00D1943E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		224FC0212664F16700D1943E /* TodoListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListManager.swift; sourceTree = "<group>"; };
+		224FC0272664F8EA00D1943E /* swiftui-mvvmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-mvvmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		224FC0292664F8EA00D1943E /* swiftui_mvvmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmTests.swift; sourceTree = "<group>"; };
+		224FC02B2664F8EA00D1943E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		224FC0072664E37800D1943E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224FC0242664F8EA00D1943E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				224FC00C2664E37800D1943E /* swiftui-mvvm */,
+				224FC0282664F8EA00D1943E /* swiftui-mvvmTests */,
 				224FC00B2664E37800D1943E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				224FC00A2664E37800D1943E /* swiftui-mvvm.app */,
+				224FC0272664F8EA00D1943E /* swiftui-mvvmTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +122,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		224FC0282664F8EA00D1943E /* swiftui-mvvmTests */ = {
+			isa = PBXGroup;
+			children = (
+				224FC0292664F8EA00D1943E /* swiftui_mvvmTests.swift */,
+				224FC02B2664F8EA00D1943E /* Info.plist */,
+			);
+			path = "swiftui-mvvmTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +151,24 @@
 			productReference = 224FC00A2664E37800D1943E /* swiftui-mvvm.app */;
 			productType = "com.apple.product-type.application";
 		};
+		224FC0262664F8EA00D1943E /* swiftui-mvvmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224FC02E2664F8EA00D1943E /* Build configuration list for PBXNativeTarget "swiftui-mvvmTests" */;
+			buildPhases = (
+				224FC0232664F8EA00D1943E /* Sources */,
+				224FC0242664F8EA00D1943E /* Frameworks */,
+				224FC0252664F8EA00D1943E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				224FC02D2664F8EA00D1943E /* PBXTargetDependency */,
+			);
+			name = "swiftui-mvvmTests";
+			productName = "swiftui-mvvmTests";
+			productReference = 224FC0272664F8EA00D1943E /* swiftui-mvvmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -130,6 +180,10 @@
 				TargetAttributes = {
 					224FC0092664E37800D1943E = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					224FC0262664F8EA00D1943E = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 224FC0092664E37800D1943E;
 					};
 				};
 			};
@@ -147,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				224FC0092664E37800D1943E /* swiftui-mvvm */,
+				224FC0262664F8EA00D1943E /* swiftui-mvvmTests */,
 			);
 		};
 /* End PBXProject section */
@@ -158,6 +213,13 @@
 			files = (
 				224FC0152664E38500D1943E /* Preview Assets.xcassets in Resources */,
 				224FC0122664E38500D1943E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224FC0252664F8EA00D1943E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +237,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		224FC0232664F8EA00D1943E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224FC02A2664F8EA00D1943E /* swiftui_mvvmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		224FC02D2664F8EA00D1943E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 224FC0092664E37800D1943E /* swiftui-mvvm */;
+			targetProxy = 224FC02C2664F8EA00D1943E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		224FC0172664E38500D1943E /* Debug */ = {
@@ -338,6 +416,46 @@
 			};
 			name = Release;
 		};
+		224FC02F2664F8EA00D1943E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6E66L27LG6;
+				INFOPLIST_FILE = "swiftui-mvvmTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samiparken.swiftui-mvvmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swiftui-mvvm.app/swiftui-mvvm";
+			};
+			name = Debug;
+		};
+		224FC0302664F8EA00D1943E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6E66L27LG6;
+				INFOPLIST_FILE = "swiftui-mvvmTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.samiparken.swiftui-mvvmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swiftui-mvvm.app/swiftui-mvvm";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -355,6 +473,15 @@
 			buildConfigurations = (
 				224FC01A2664E38500D1943E /* Debug */,
 				224FC01B2664E38500D1943E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		224FC02E2664F8EA00D1943E /* Build configuration list for PBXNativeTarget "swiftui-mvvmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224FC02F2664F8EA00D1943E /* Debug */,
+				224FC0302664F8EA00D1943E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
