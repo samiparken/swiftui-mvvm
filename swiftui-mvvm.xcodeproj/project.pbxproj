@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		224FC00E2664E37800D1943E /* swiftui_mvvmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FC00D2664E37800D1943E /* swiftui_mvvmApp.swift */; };
-		224FC0102664E37800D1943E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FC00F2664E37800D1943E /* ContentView.swift */; };
+		224FC0102664E37800D1943E /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FC00F2664E37800D1943E /* TodoListView.swift */; };
 		224FC0122664E38500D1943E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224FC0112664E38500D1943E /* Assets.xcassets */; };
 		224FC0152664E38500D1943E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224FC0142664E38500D1943E /* Preview Assets.xcassets */; };
+		224FC0202664F11A00D1943E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FC01F2664F11A00D1943E /* Item.swift */; };
+		224FC0222664F16700D1943E /* TodoListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224FC0212664F16700D1943E /* TodoListManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		224FC00A2664E37800D1943E /* swiftui-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		224FC00D2664E37800D1943E /* swiftui_mvvmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmApp.swift; sourceTree = "<group>"; };
-		224FC00F2664E37800D1943E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		224FC00F2664E37800D1943E /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		224FC0112664E38500D1943E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		224FC0142664E38500D1943E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		224FC0162664E38500D1943E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224FC01F2664F11A00D1943E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		224FC0212664F16700D1943E /* TodoListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 		224FC00C2664E37800D1943E /* swiftui-mvvm */ = {
 			isa = PBXGroup;
 			children = (
+				224FC01E2664F0DB00D1943E /* Model */,
+				224FC01D2664F0CD00D1943E /* View Model */,
+				224FC01C2664F0C200D1943E /* Views */,
 				224FC00D2664E37800D1943E /* swiftui_mvvmApp.swift */,
-				224FC00F2664E37800D1943E /* ContentView.swift */,
 				224FC0112664E38500D1943E /* Assets.xcassets */,
 				224FC0162664E38500D1943E /* Info.plist */,
 				224FC0132664E38500D1943E /* Preview Content */,
@@ -67,6 +73,30 @@
 				224FC0142664E38500D1943E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		224FC01C2664F0C200D1943E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				224FC00F2664E37800D1943E /* TodoListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		224FC01D2664F0CD00D1943E /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				224FC0212664F16700D1943E /* TodoListManager.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		224FC01E2664F0DB00D1943E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				224FC01F2664F11A00D1943E /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				224FC0102664E37800D1943E /* ContentView.swift in Sources */,
+				224FC0102664E37800D1943E /* TodoListView.swift in Sources */,
+				224FC0222664F16700D1943E /* TodoListManager.swift in Sources */,
+				224FC0202664F11A00D1943E /* Item.swift in Sources */,
 				224FC00E2664E37800D1943E /* swiftui_mvvmApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

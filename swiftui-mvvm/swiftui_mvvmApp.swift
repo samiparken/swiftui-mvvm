@@ -1,17 +1,13 @@
-//
-//  swiftui_mvvmApp.swift
-//  swiftui-mvvm
-//
-//  Created by Sam on 2021-05-31.
-//
-
 import SwiftUI
 
 @main
 struct swiftui_mvvmApp: App {
+    
+    @StateObject var todoManger = TodoListManager() //call by reference
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TodoListView(todoManager: todoManger)
         }
     }
 }
