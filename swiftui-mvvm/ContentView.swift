@@ -7,9 +7,14 @@ struct Item: Identifiable {
 
 struct ContentView: View {
     //MARK: - PROPERTIES
-    var items = [Item(id:UUID(),name:"First"),
+    @State var items = [Item(id:UUID(),name:"First"),
                  Item(id:UUID(),name:"Second"),
                  Item(id:UUID(),name:"Third")]
+    
+    /*
+     @State property wrapper to allow us to modify values inside a struct,
+     */
+    
     
     //MARK: - BODY
     
