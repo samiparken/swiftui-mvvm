@@ -7,21 +7,29 @@ struct TodoListView: View {
     //MARK: - BODY
     var body: some View {
         NavigationView {
-            List {
-                ForEach(todoManager.items) {item in
-                    NavigationLink(
-                        destination: Text("Destination \(item.name)"),
-                        label: {
-                            Text(item.name)
-                        })
-                }
-                .onDelete(perform: { indexSet in
-                    todoManager.delete(at: indexSet)
+            ZStack {
+                List {
+                    ForEach(todoManager.items) {item in
+                        NavigationLink(
+                            destination: Text("Destination \(item.name)"),
+                            label: {
+                                Text(item.name)
+                            })
+                    }
+                    .onDelete(perform: { indexSet in
+                        todoManager.delete(at: indexSet)
                     })
-                .onMove(perform: { indices, newOffset in
-                    todoManager.move(indices,newOffset)
-                })
-            }//:List
+                    .onMove(perform: { indices, newOffset in
+                        todoManager.move(indices,newOffset)
+                    })
+                }//:List
+                                
+                if todoManager.items.count == 0 {
+                    Text("Please, start by adding items.")
+                        .foregroundColor(.gray)
+                }
+                
+            }//:ZStack
             .navigationBarTitle(Text("Todo's"), displayMode: .large)
             .toolbar(content:{
                 ToolbarItemGroup(placement:.navigationBarTrailing){
