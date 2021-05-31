@@ -5,9 +5,10 @@ class TodoListManager: ObservableObject {
     @Published var items: [Item] = [Item(id:UUID(),name:"First"),
                                     Item(id:UUID(),name:"Second"),
                                     Item(id:UUID(),name:"Third")]
-    init() {
-        //get my data and set to my items array
-        
+    init(isForTest: Bool = false) {
+        if isForTest {
+            //get my data and set to my items array
+        }
     }
     
     func move(_ indices: IndexSet, _ newOffset: Int) {
@@ -22,5 +23,19 @@ class TodoListManager: ObservableObject {
         for index in indexSet {
             items.remove(at:index)
         }
+    }
+    
+    static func emptyState() -> TodoListManager {
+        let manager = TodoListManager(isForTest: true)
+        manager.items = []
+        return manager
+    }
+    
+    static func fullState() -> TodoListManager {
+        let manager = TodoListManager(isForTest: true)
+        manager.items = [Item(id:UUID(),name:"First"),
+                         Item(id:UUID(),name:"Second"),
+                         Item(id:UUID(),name:"Third")]
+        return manager
     }
 }

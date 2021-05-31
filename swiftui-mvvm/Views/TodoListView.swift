@@ -41,8 +41,10 @@ struct TodoListView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            TodoListView(todoManager: TodoListManager())
-            TodoListView(todoManager: TodoListManager())
+            TodoListView(todoManager: TodoListManager.emptyState())
+                .previewDisplayName("empty state")
+            TodoListView(todoManager: TodoListManager.fullState())
+                .previewDisplayName("full state")
         }
     }
 }
